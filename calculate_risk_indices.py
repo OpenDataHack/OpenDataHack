@@ -59,7 +59,6 @@ import netCDF4 as nc
 import numpy as np
 from matplotlib import pyplot as plt
 from matplotlib import font_manager as ftm
-from mpl_toolkits.basemap import Basemap
 import time
 import datetime
 import math
@@ -120,7 +119,7 @@ ddaydataRH = datetime.date.fromtimestamp(int(timesRH))         # Convert time to
 filenamestrT = filenameT;                                      # Filename
 varnameT = varnameT;                                           # Variable name
 ncdataT, dataT, latitudesT, longitudesT, timesT = load_netCDF4_compdata(filenamestrT, varnameT, varlet, varformat);
-dataT = dataT[0,:,:]  - 273.15;                                # Store to 2D array and convert from K to °C
+dataT = dataT[0,:,:]  - 273.15;                                # Store to 2D array and convert from K to 
 ddaydataT = datetime.date.fromtimestamp(int(timesT))           # Convert time to date from UNIX timestamp
 
 ### ----- Define thresholds for data and interpolate higher resolution data (PM10, PM25 and NO2) 
@@ -167,9 +166,30 @@ dataTthr[ np.where( dataT < valthr ) ] = 1
 RiskIndices = find_risk_index(dataPM10thr,dataPM25thr,dataNO2thr,dataRHthr,dataTthr)
 
 ### ----- Save Risk Indices Data
-Lat = longitudesT;     
-Long = latitudesT;
+Lat = latitudesT;     
+Long = longitudesT;
 XLongGrid, YLatGrid = np.meshgrid(Long, Lat);
 GridRiskIndices = [Long, Lat, XLongGrid, YLatGrid, RiskIndices];
 foutputname = 'RiskIndicesOut';
 pickle.dump(GridRiskIndices, open(foutputname, 'w'));
+
+
+print RiskIndices.shape
+
+infile = nc.Dataset('./output_temp_comp_Jan2016.nc')
+dew = infile.variables['t2m']
+outfile = nc.Dataset('./output_index_comp_Jan2016.nc', 'r+')
+
+outVar = outfile.createVariable("index", infile.variables['t2m'].datatype, ('ansi', 'Lat','Long') ) 
+
+outarr = np.empty(dew.shape)
+
+for a in range(dew.shape[0]):
+    for x in range(dew.shape[1]):
+        for y in range(dew.shape[2]):
+            outarr[a,x,y] = RiskIndices[x,y]
+
+
+outVar[:] = outarr[:]
+
+outfile.close()
