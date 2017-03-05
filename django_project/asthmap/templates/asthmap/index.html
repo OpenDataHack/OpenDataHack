@@ -1,0 +1,39 @@
+{% load staticfiles %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asthmap</title>
+    <link
+        href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+        rel="stylesheet"
+        type="text/css"
+    >
+    <link
+        rel="stylesheet"
+        href="{% static 'assets/css/normalize.css' %}"
+    >
+    <link
+        rel="stylesheet"
+        href="{% static 'assets/css/skeleton.css' %}"
+    >
+    <link
+        rel="stylesheet"
+        href="{% static 'assets/css/layout.css' %}"
+    >
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row" id="map"></div>
+    <!--<svg width="960" height="500"></svg>-->
+</div>
+<script
+    src="{% static 'bower_components/requirejs/require.js' %}"
+    data-main="{% static 'app/main' %}">
+</script>
+</body>
+</html>

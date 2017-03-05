@@ -1,0 +1,81 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'ol3-popup-umd' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'ol3-popup-umd', null ]
+5 verbose cache add name=undefined spec="ol3-popup-umd" args=["ol3-popup-umd",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'ol3-popup-umd',
+6 verbose parsed url   path: 'ol3-popup-umd',
+6 verbose parsed url   href: 'ol3-popup-umd' }
+7 silly lockFile 17926458-ol3-popup-umd ol3-popup-umd
+8 verbose lock ol3-popup-umd /home/sysadmin/.npm/17926458-ol3-popup-umd.lock
+9 silly lockFile 17926458-ol3-popup-umd ol3-popup-umd
+10 silly lockFile 17926458-ol3-popup-umd ol3-popup-umd
+11 verbose addNamed [ 'ol3-popup-umd', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile db5d0417-ol3-popup-umd ol3-popup-umd@
+14 verbose lock ol3-popup-umd@ /home/sysadmin/.npm/db5d0417-ol3-popup-umd.lock
+15 silly addNameRange { name: 'ol3-popup-umd', range: '*', hasData: false }
+16 verbose url raw ol3-popup-umd
+17 verbose url resolving [ 'https://registry.npmjs.org/', './ol3-popup-umd' ]
+18 verbose url resolved https://registry.npmjs.org/ol3-popup-umd
+19 info trying registry request attempt 1 at 12:58:44
+20 http GET https://registry.npmjs.org/ol3-popup-umd
+21 http 200 https://registry.npmjs.org/ol3-popup-umd
+22 silly registry.get cb [ 200,
+22 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"ECGR885Y4TYLWJ79RWNQZBP7Y"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=300',
+22 silly registry.get     'content-length': '13125',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     date: 'Mon, 19 Sep 2016 11:58:46 GMT',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     connection: 'keep-alive',
+22 silly registry.get     'x-served-by': 'cache-lhr6343-LHR',
+22 silly registry.get     'x-cache': 'MISS',
+22 silly registry.get     'x-cache-hits': '0',
+22 silly registry.get     'x-timer': 'S1474286326.169800,VS0,VE185',
+22 silly registry.get     vary: 'Accept-Encoding' } ]
+23 silly addNameRange number 2 { name: 'ol3-popup-umd', range: '*', hasData: true }
+24 silly addNameRange versions [ 'ol3-popup-umd', [ '1.1.0', '1.2.0', '1.2.1' ] ]
+25 verbose addNamed [ 'ol3-popup-umd', '1.2.1' ]
+26 verbose addNamed [ '1.2.1', '1.2.1' ]
+27 silly lockFile e61a3ddb-ol3-popup-umd-1-2-1 ol3-popup-umd@1.2.1
+28 verbose lock ol3-popup-umd@1.2.1 /home/sysadmin/.npm/e61a3ddb-ol3-popup-umd-1-2-1.lock
+29 silly lockFile 6ff3b7e7-opup-umd-ol3-popup-umd-1-2-1-tgz https://registry.npmjs.org/ol3-popup-umd/-/ol3-popup-umd-1.2.1.tgz
+30 verbose lock https://registry.npmjs.org/ol3-popup-umd/-/ol3-popup-umd-1.2.1.tgz /home/sysadmin/.npm/6ff3b7e7-opup-umd-ol3-popup-umd-1-2-1-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/ol3-popup-umd/-/ol3-popup-umd-1.2.1.tgz',
+31 verbose addRemoteTarball   'b7a766fd0d981d07b232413850f325610149307c' ]
+32 silly lockFile 6ff3b7e7-opup-umd-ol3-popup-umd-1-2-1-tgz https://registry.npmjs.org/ol3-popup-umd/-/ol3-popup-umd-1.2.1.tgz
+33 silly lockFile 6ff3b7e7-opup-umd-ol3-popup-umd-1-2-1-tgz https://registry.npmjs.org/ol3-popup-umd/-/ol3-popup-umd-1.2.1.tgz
+34 silly lockFile e61a3ddb-ol3-popup-umd-1-2-1 ol3-popup-umd@1.2.1
+35 silly lockFile e61a3ddb-ol3-popup-umd-1-2-1 ol3-popup-umd@1.2.1
+36 silly lockFile db5d0417-ol3-popup-umd ol3-popup-umd@
+37 silly lockFile db5d0417-ol3-popup-umd ol3-popup-umd@
+38 error Error: EACCES, mkdir '/home/sysadmin/tmp/npm-15255-xnf707_7'
+38 error  { [Error: EACCES, mkdir '/home/sysadmin/tmp/npm-15255-xnf707_7']
+38 error   errno: 3,
+38 error   code: 'EACCES',
+38 error   path: '/home/sysadmin/tmp/npm-15255-xnf707_7' }
+39 error Please try running this command again as root/Administrator.
+40 error System Linux 3.19.0-32-generic
+41 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "ol3-popup-umd"
+42 error cwd /home/sysadmin/Projects/envii/envii/static
+43 error node -v v0.10.25
+44 error npm -v 1.3.10
+45 error path /home/sysadmin/tmp/npm-15255-xnf707_7
+46 error code EACCES
+47 error errno 3
+48 error stack Error: EACCES, mkdir '/home/sysadmin/tmp/npm-15255-xnf707_7'
+49 verbose exit [ 3, true ]

@@ -1,0 +1,96 @@
+body {
+  /*background-color: black;*/
+}
+
+.results-label {
+    font-size: 100px;
+}
+.header .button {
+  border: none;
+}
+
+/*input[type="file"] {*/
+    /*display: inline;*/
+/*}*/
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0px;
+  box-sizing: border-box;
+}
+
+#map {
+    /*margin: 0 20px 0 0;*/
+}
+
+
+.ol-touch .rotate-north {
+  top: 80px;
+}
+
+.ol-mycontrol {
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    width:200px;
+    top: 5px;
+    left: 5px;
+    text-align: center;
+}
+
+.ol-mycontrol > img {
+    display: block;
+    margin: auto;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+}
+
+#popup-content > table {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+#popup-content > table th,
+#popup-content > table td {
+    padding: 5px 5px;
+    font-size: 14px;
+    /* text-align: left; */
+    /* border-bottom: 1px solid #E1E1E1; */
+}
+
+/*following is for basic d3 styling*/
+.axis--x path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+hr {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+.sect-hdr {
+    font-size: 15px;
+    text-align: left;
+}
+
+.ui-hidden {
+    visibility: hidden;
+}
+
+.ui-visible {
+    visibility: visible;
+}
